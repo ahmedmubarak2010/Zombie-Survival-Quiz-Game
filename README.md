@@ -103,7 +103,6 @@ python game.py
     <img src="https://img.icons8.com/color/50/whatsapp.png" width="45">
   </a>
 </p>
----
 
 ## Author
 
