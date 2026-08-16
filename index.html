@@ -3,18 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Zombie Survival Quiz Game - Web Edition">
-  <title>Zombie Survival Quiz Game</title>
+  <meta name="description" content="Zombie Survival Quiz Game - Retro Web Edition">
+  <title>Zombie Survival // Web Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="game-shell">
-    <header class="topbar">
-      <div><span class="eyebrow">PYTHON PROJECT • WEB EDITION</span><h1>🧟 Zombie Survival</h1></div>
-      <div class="stats" id="stats" hidden><span>❤️ <b id="health">100</b></span><span>🏆 <b id="score">0</b></span></div>
+  <main class="crt">
+    <div class="crt-glass"></div>
+    <header class="hud">
+      <div class="brand">
+        <span class="status-dot"></span>
+        <div>
+          <div class="eyebrow">ZOMBIE SURVIVAL // TERMINAL</div>
+          <h1>THE LAST OUTPOST</h1>
+        </div>
+      </div>
+      <div class="hud-stats">
+        <div><span>SCORE</span><strong id="score">000</strong></div>
+        <div><span>HEALTH</span><strong id="health">100%</strong></div>
+      </div>
     </header>
-    <section class="screen" id="screen" aria-live="polite"></section>
-    <footer><span>Original game by Ahmed Mubarak</span><a href="https://github.com/ahmedmubarak2010/Zombie-Survival-Quiz-Game" target="_blank" rel="noopener noreferrer">GitHub</a></footer>
+
+    <div class="game-layout">
+      <aside class="sidebar">
+        <section class="side-block">
+          <h2>INVENTORY</h2>
+          <div class="side-line"></div>
+          <div id="inventory" class="inventory-list">NOTHING</div>
+        </section>
+        <section class="side-block">
+          <h2>WEAPON</h2>
+          <div class="side-line"></div>
+          <div id="weapon" class="weapon-value">—</div>
+        </section>
+        <section class="side-block mission">
+          <h2>MISSION</h2>
+          <div class="side-line"></div>
+          <p>Survive the outbreak.<br>Find ammunition.<br>Defeat the zombies.</p>
+        </section>
+      </aside>
+
+      <section class="terminal" aria-live="polite">
+        <div class="terminal-bar">
+          <span>● LIVE</span>
+          <span id="location">OUTSKIRTS</span>
+          <span id="question-counter">SYSTEM READY</span>
+        </div>
+        <div id="story" class="story"></div>
+        <div id="choices" class="choices"></div>
+        <div class="command-line">
+          <span>&gt;</span>
+          <span id="command-status">AWAITING COMMAND</span>
+          <span class="cursor"></span>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <button id="backBtn" type="button">← BACK</button>
+      <span>AHMED MUBARAK // PYTHON PROJECT • WEB EDITION</span>
+      <button id="restartBtn" type="button">RESTART ↻</button>
+    </footer>
   </main>
   <script src="script.js"></script>
 </body>
